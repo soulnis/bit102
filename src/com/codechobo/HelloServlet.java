@@ -48,7 +48,7 @@ public class HelloServlet extends HttpServlet {
 		out.println("</h1>");
 		out.println("</body>");
 		out.println("</html>");
-	 
+	 <div>
 	}
 
 	/**
