@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="section-wrapper quick-switch"> 
+            <div class="layout-twothirds-center">  
+                 <input id="returnUrl" type="hidden" value="">
+                  <input id="reauthenticate" type="hidden" value="">
+                   <div id="cdn-error" class="hidden error-message"> 
+                Your browser was unable to load all of Trello's resources.  They may have been blocked by your firewall, proxy or browser configuration.<br><br>
+                Try refreshing the page and if that doesn't work, check out our 
+                <a href="http://help.trello.com/article/771-loading-resources-from-trellos-cdn">troubleshooting guide</a>.
+               </div> 
+               <div id="error" class="hidden quick-switch">
+                   <p class="error-message"> </p> 
+                   </div> <div id="login-info"> 
+                       <p class="info-message hide-when-two-factor hidden"> </p
+                       > </div> <h1>Log in to Trello</h1> 
+                        <span class="create-account">or <a href="/signup" id="signup">create an account</a></span>  
+                          <div class="login-password-container">  <form id="login-form" novalidate="novalidate" method="POST">
+                               <div class="login-password-container-email"> <div class="hide-when-two-factor"> <label for="user">Email
+                                    <span class="quiet">(or username)</span></label> 
+                                    <input type="email" name="user" id="user" tabindex="1" autocorrect="off" spellcheck="false" autocapitalize="off" autofocus="autofocus" placeholder="e.g., leela@planetexpress.nnyc"> 
+                                    <label for="password">Password</label>  <input type="password" name="password" id="password" tabindex="2" placeholder="e.g., ••••••••••••"> </div> 
+                                    <div class="two-factor hidden"> <div class="two-factor-sms hidden"> We've sent a code to <b><span class="sms-number"></span></b>, it should get to you soon. </div>
+                                     <div class="two-factor-sms-error hidden"> We tried to send a code to <b><span class="sms-number"></span></b> but there was an error. You can <a id="start-over" href="#">try to login again</a> or enter a backup code. </div> <div class="two-factor-totp hidden"> Use the app on your mobile device to generate a code. </div> <br> <label>Two Factor Authentication Code <input class="two-factor-sms two-factor-sms-error hidden" type="number" name="two-factor" autocomplete="off" id="sms" tabindex="2" placeholder="e.g., 723110"> <input class="two-factor-totp hidden" type="number" name="two-factor" autocomplete="off" id="totp" tabindex="2" placeholder="e.g., 723110"> </label> <label style="display:inline;"> <input type="checkbox" id="remember" style="display:inline;position:relative;top:-2px;margin: 0 .3em .3em">  Don't ask for codes when I log in on this device </label> </div> <input id="login" tabindex="3" type="submit" class="button button-green" value="Log In">   <div class="login-google-button hide-when-two-factor">  <div id="google-link" class="google-button"> <span class="icon"></span> <span class="label">Log in with Google</span> </div>      </div>    </div> </form>   <p class="quiet hide-when-two-factor"> <a href="/login/sso?returnUrl=" tabindex="6">Log in with SSO</a> </p>   <span class="login-forget-password quiet hide-when-two-factor"> <a href="/forgot" tabindex="4">Forgot your password?</a> </span>  <br>  </div> <div class="hidden"> <form id="login-google" action="/authenticate_openid" method="post"> <input type="hidden" name="openid_identifier" value="https://www.google.com/accounts/o8/id">    <input type="hidden" name="locale" id="login-google-locale" value=""> <input type="hidden" name="confirmNew" value="true"> </form> </div>  <script>
+                window.trackExperiment({
+                  experimentId: 'signupOrLogin' + 'V1',
+                  variationId: 'quickSwitch'
+                });
+              </script>    </div> </div>
+</body>
+</html>
